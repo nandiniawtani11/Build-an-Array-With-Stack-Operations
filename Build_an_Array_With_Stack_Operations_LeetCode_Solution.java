@@ -3,19 +3,15 @@ class Solution {
         Stack<Integer> stack=new Stack<Integer>();
         List<String> list=new ArrayList<String>();
         int t=0;
-        for(int i=1;i<=n;i++)
-        {
-            stack.push(i);
+        for(int k=1;k<=n;k++){
+            stack.push(k);
             list.add("Push");
-            if(i!=target[t])
-            {
+            if(k!=target[t]){
                 stack.pop();
                 list.add("Pop");
             }
-            else
-            {
-                if(t!=target.length-1)
-                {
+            else{
+                if(t!=target.length-1){
                     t++;
                 }
                 else{
@@ -24,6 +20,5 @@ class Solution {
             }
         }
         return list;
-        
     }
 }
